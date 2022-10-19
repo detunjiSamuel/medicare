@@ -1,0 +1,23 @@
+[package]
+name = "tw-storage-macros"
+description = "Procedural macros helper for interacting with `cw-storage-plus` and `cosmwasm-storage`"
+version = "0.2.0"
+license = "Apache-2.0"
+authors = ["TwilightCouncil"]
+edition = "2021"
+repository = "https://github.com/TwilightCouncil/twilight-standard"
+
+[lib]
+proc-macro = true 
+
+[features]
+backtraces = ["cosmwasm-std/backtraces"]
+library = []
+
+[dependencies]
+syn = { version = "1.0.93", features = ["full"] }
+
+[dev-dependencies]
+cosmwasm-std = { version = "1.0.0" }
+cw-storage-plus = "0.13.4"
+serde = { version = "1.0.137", default-features = false, features = ["derive"] }
